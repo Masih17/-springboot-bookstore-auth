@@ -2,6 +2,8 @@ package com.example.bookstore;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -32,6 +34,12 @@ public class BookStoreApplication {
 			UserRepository urepository) {
 		return (args) -> {
 
+			// Test database connection
+        	try (Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:49954/localdb", "azure", "6#vWHD_$")) {
+            	log.info("Connected to MySQL");
+       		} catch (SQLException e) {
+            	log.error("Database couldn't be reached", e);
+        	}
 			// Your code...add some demo data to db
 
 			log.info("Few test book");
