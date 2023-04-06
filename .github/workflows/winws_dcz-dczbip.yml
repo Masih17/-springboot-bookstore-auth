@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'dcz-dczbip'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CAA3FEBF9CE440B9B5DFC1D48AFA0DC1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BCB0CC68F8E141CBB1CD2D9E09D49C6F }}
           package: '*.jar'
