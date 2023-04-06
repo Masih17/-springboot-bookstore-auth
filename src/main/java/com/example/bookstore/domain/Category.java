@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 public class Category {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO, generator="native")
 	private Long categoryId;
 	private String name;
 	
@@ -28,11 +28,11 @@ public class Category {
 		this.name = name;
 	}
 
-	public Long getCategoryid() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryid(Long categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -54,7 +54,7 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "[categoryid=" + categoryId + ", name=" + name ;
+		return "[categoryId=" + categoryId + ", name=" + name ;
 	}
 	
 }

@@ -15,8 +15,10 @@ import com.example.bookstore.domain.CategoryRepository;
 
 import com.example.bookstore.domain.User;
 import com.example.bookstore.domain.UserRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
+@EnableJpaRepositories
 public class BookStoreApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(BookStoreApplication.class);
@@ -53,7 +55,7 @@ public class BookStoreApplication {
 
 			// Creating users: admin/ADMIN, user/USER
 			User user1 = new User("user", "$2y$10$.iS2KHPDEoh1sRqBWqq/mO5K6xi/hdFGc6UX5NeYyEY2MFmDTIzMa", "USER"); //***80/ hame kuchik
-			User user2 = new User("admin", "$2y$10$gAjGxeixeSXvFMW6SrJwHOSyu9A.ia1rmlX9XF0mq4S8vF24t99c6", "ADMIN"); // mese balai, yeki dar miun
+			User user2 = new User("admin", "$2y$10$gAjGxeixeSXvFMW6SrJwHOSyu9A.ia1rmlX9XF0mq4S8vF24t99c6", "ADMIN"); // mese balai, eki dar miun
 			urepository.save(user1);
 			urepository.save(user2);
 
